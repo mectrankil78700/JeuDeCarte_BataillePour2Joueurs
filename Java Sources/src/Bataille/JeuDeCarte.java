@@ -21,7 +21,6 @@ public class JeuDeCarte {
 		int jeuDeCarte_NbCartesTypes = nombreDeCartesParTypes;
 		int jeuDeCarte_NbTypesCartes = nombreDeTypeDeCartes;
 		int jeuDeCarte_NbValeursCartes = nombreDeValeursDeCartes;
-		carte = new Carte(); 
 		// - - [ ID de cartes ] - - //
 		for(int i=1; i<=jeuDeCarte_IDCartes; i++){
 			idDeCartes.add(""+i+"");
@@ -68,6 +67,7 @@ public class JeuDeCarte {
 			}
 		}
 		*/
+		
 		for(int i=1; i<=jeuDeCarte_NbTypesCartes; i++){
 			for(int j=0; j<jeuDeCarte_NbCartesTypes; j++){
 				
@@ -75,6 +75,8 @@ public class JeuDeCarte {
 				 * PROBLEME LORS DE LA CREATION D'UNE NOUVELLE CARTE :
 				 *  => réation d'un nouvel objet carte pour chaque nouvelle carte
 				 */
+		
+				carte = new Carte(); 
 				
 				carte.idDeLaCarte = idDeCartes.get(j);
 				carte.nomDeLaCarte = nomsDeCartes.get(j)+" de "+typesDeCartes.get(j);
